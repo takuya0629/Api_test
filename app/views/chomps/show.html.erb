@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @chomp.name %>
+</p>
+
+<p>
+  <strong>Content:</strong>
+  <%= @chomp.content %>
+</p>
+
+<%= link_to 'Edit', edit_chomp_path(@chomp) %> |
+<%= link_to 'Back', chomps_path %>

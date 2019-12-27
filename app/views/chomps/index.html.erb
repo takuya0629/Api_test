@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Chomps</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @chomps.each do |chomp| %>
+      <tr>
+        <td><%= chomp.name %></td>
+        <td><%= chomp.content %></td>
+        <td><%= link_to 'Show', chomp %></td>
+        <td><%= link_to 'Edit', edit_chomp_path(chomp) %></td>
+        <td><%= link_to 'Destroy', chomp, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Chomp', new_chomp_path %>
