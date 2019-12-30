@@ -1,3 +1,6 @@
+require  'net/http' 
+require  'uri' 
+
 class ChompsController < ApplicationController
   before_action :set_chomp, only: [:show, :edit, :update, :destroy]
 
@@ -5,6 +8,15 @@ class ChompsController < ApplicationController
   # GET /chomps.json
   def index
     @chomps = Chomp.all
+
+    uri = URI.parse("https://api.pandascore.co/lol/champions?token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
+    response = Net::HTTP.get_response(uri)
+    @response_array = JSON.load(response.body)
+
+    player_uri = URI.parse("https://api.pandascore.co/lol/teams?page[number]=2&token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
+    player_response = Net::HTTP.get_response(player_uri)
+    @player_array = JSON.load(player_response.body)
+    binding.irb
   end
 
   # GET /chomps/1
