@@ -28,12 +28,7 @@
  <%#= "name: #{arr['name']}" %>
  <%#= image_tag "#{arr['big_image_url']}" %>
  <%# end %>
-
- <% @player_array.each do |arr| %>
- <%= "name: #{arr['name']}" %>
- <%= image_tag "#{arr['image_url']}" %>
- <% end %>
-
+ 
 <br>
 
 <%= link_to 'New Chomp', new_chomp_path %>

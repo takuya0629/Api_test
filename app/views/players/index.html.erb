@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Players</h1>
+
+
+<table>
+  <thead>
+    <tr>
+      <th>名前</th>
+      <th>アイコン</th>
+      <th>team</th>
+      <th>role</th>
+      <th>国籍</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @player_array.each do |arr| %>
+      <tr>
+        <td><%= "name: #{arr['name']}" %></td>
+        <td><%= image_tag "#{arr['image_url']}", :size =>'310x200' %></td>
+        <td><%= "#{arr['acronym']}" %></td>
+        <td><%= "#{arr['role']}" %></td>
+        <td><%= "#{arr['hometown']}" %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Player', new_player_path %>

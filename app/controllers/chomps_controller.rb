@@ -13,10 +13,7 @@ class ChompsController < ApplicationController
     response = Net::HTTP.get_response(uri)
     @response_array = JSON.load(response.body)
 
-    player_uri = URI.parse("https://api.pandascore.co/lol/teams?page[number]=2&token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
-    player_response = Net::HTTP.get_response(player_uri)
-    @player_array = JSON.load(player_response.body)
-    binding.irb
+    # binding.irb
   end
 
   # GET /chomps/1
