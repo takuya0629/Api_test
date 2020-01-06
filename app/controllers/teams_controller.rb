@@ -1,15 +1,12 @@
 class TeamsController < ApplicationController
   before_action :set_team, only: [:show, :edit, :update, :destroy]
+  before_action :all_set, only: [:show, :edit, :update, :destroy, :index]
   require 'net/http'
 
   # GET /teams
   # GET /teams.json
   def index
     @teams = Team.all
-
-    team_uri = URI.parse("https://api.pandascore.co/lol/teams?page[number]=3&token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
-    team_response = Net::HTTP.get_response(team_uri)
-    @team_array = JSON.load(team_response.body)
   end
 
   # GET /teams/1
@@ -76,4 +73,5 @@ class TeamsController < ApplicationController
     def team_params
       params.require(:team).permit(:name, :content)
     end
+
 end

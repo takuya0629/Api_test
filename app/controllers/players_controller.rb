@@ -1,12 +1,14 @@
 class PlayersController < ApplicationController
   before_action :set_player, only: [:show, :edit, :update, :destroy]
+  before_action :all_set, only: [:show, :edit, :update, :destroy, :index]
+  require 'net/http'
 
   # GET /players
   # GET /players.json
   def index
     @players = Player.all
 
-    player_uri = URI.parse("https://api.pandascore.co/lol/players?page[number]=3&token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
+    player_uri = URI.parse("https://api.pandascore.co/lol/players?filter[nationality]=JP&token=6gjV6ztWpjlQBFOnEYilG0ZUscha-OCUyQTPyafVputIWr0IW7A")
     player_response = Net::HTTP.get_response(player_uri)
     @player_array = JSON.load(player_response.body)
   end
