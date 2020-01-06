@@ -18,7 +18,11 @@
       <tr>
         <td><%= "name: #{arr['name']}" %></td>
         <td><%= image_tag "#{arr['image_url']}", :size =>'310x200' %></td>
-        <td><%= "#{arr['acronym']}" %></td>
+        <% if arr['current_team'].present? %>
+          <td><%= "#{arr['current_team']['acronym']}" %></td>
+        <% else %>
+          <td>未所属</td>
+        <% end %>
         <td><%= "#{arr['role']}" %></td>
         <td><%= "#{arr['hometown']}" %></td>
       </tr>
