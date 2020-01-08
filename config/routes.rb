@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root 'toppage#toppage'
   resources :teams
   resources :players
   resources :chomps

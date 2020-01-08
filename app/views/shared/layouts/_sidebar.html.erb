@@ -1,25 +1,178 @@
 <div class='side_bar col-md-2'>
 
   <div class="hidden_box">
-      <label for="label1">クリックして表示</label>
-      <input type="checkbox" id="label1"/>
-      <div class="hidden_show">
+    <label for="label1">地域別チーム一覧</label>
+    <input type="checkbox" id="label1"/>
+    <div class="hidden_show">
+      <!--非表示ここから-->     
+      <div class="hidden_box">
+        <label for="label2">韓国 (LCK)</label>
+        <input type="checkbox" id="label2"/>
+        <div class="hidden_show">
         <!--非表示ここから-->     
-          <% @player_array.each do |arr| %>
-            <%= "チーム名: #{arr['name']}" %>
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        </div>
+      </div>
+        <!--ここまで-->
+
+      <div class="hidden_box">
+        <label for="label3">中国 (LPL)</label>
+        <input type="checkbox" id="label3"/>
+        <div class="hidden_show">
+          <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+          <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+      <label for="label4">ヨーロッパ (LEC)</label>
+      <input type="checkbox" id="label4"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @es.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        </div>
+      </div>
+
+        <!--ここまで-->
+      <div class="hidden_box">
+      <label for="label5">北アメリカ (LCS)</label>
+      <input type="checkbox" id="label5"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
             <br>
           <% end %>
         <!--ここまで-->
+        </div>
       </div>
-  </div>
 
-  <div class="hidden_box">
-    <label for="label2">クリックして表示</label>
-    <input type="checkbox" id="label2"/>
-    <div class="hidden_show">
-      <!--非表示ここから-->     
-        <p><img src="face.png"></p>
-      <!--ここまで-->
+      <div class="hidden_box">
+        <label for="label6">台湾・香港・マカオ (LMS)</label>
+        <input type="checkbox" id="label6"/>
+        <div class="hidden_show">
+          <!--非表示ここから-->     
+          <% @jp.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        </div>
+      </div>
+
+        <!--ここまで-->
+      <div class="hidden_box">
+      <label for="label7">ベトナム (VCS)</label>
+      <input type="checkbox" id="label7"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+        <% @kr.each do |arr| %>
+          <%= "#{arr['name']}" %>
+          <br>
+        <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+      <label for="label8">東南アジア (LST)</label>
+      <input type="checkbox" id="label8"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+        <% @jp.each do |arr| %>
+          <%= "#{arr['name']}" %>
+          <br>
+        <% end %>
+        </div>
+      </div>
+
+        <!--ここまで-->
+      <div class="hidden_box">
+      <label for="label9">ブラジル (CBLoL)</label>
+      <input type="checkbox" id="label9"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+        <label for="label10">ロシアを含む独立国家共同体 (LCL)</label>
+        <input type="checkbox" id="label10"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @jp.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        </div>
+      </div>
+
+        <!--ここまで-->
+      <div class="hidden_box">
+      <label for="label11">日本 (LJL)</label>
+      <input type="checkbox" id="label11"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+      <label for="label12">ラテンアメリカ (LLA)</label>
+      <input type="checkbox" id="label12"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+      <label for="label13">オセアニア (OPL)</label>
+      <input type="checkbox" id="label13"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
+
+      <div class="hidden_box">
+      <label for="label14">トルコ (TCL)</label>
+      <input type="checkbox" id="label14"/>
+        <div class="hidden_show">
+        <!--非表示ここから-->     
+          <% @kr.each do |arr| %>
+            <%= "#{arr['name']}" %>
+            <br>
+          <% end %>
+        <!--ここまで-->
+        </div>
+      </div>
     </div>
-</div>
+  </div>
 </div>
